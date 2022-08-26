@@ -9,8 +9,8 @@ import (
 
 	"github.com/xanzy/go-gitlab"
 
-	"github.com/reviewdog/reviewdog"
-	"github.com/reviewdog/reviewdog/service/serviceutil"
+	"github.com/androidjp/reviewdog"
+	"github.com/androidjp/reviewdog/service/serviceutil"
 )
 
 var _ reviewdog.DiffService = &MergeRequestDiff{}

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/reviewdog/reviewdog"
-	"github.com/reviewdog/reviewdog/filter"
+	"github.com/androidjp/reviewdog"
+	"github.com/androidjp/reviewdog/filter"
 )
 
 type fakeDiffService struct {

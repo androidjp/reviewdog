@@ -10,12 +10,12 @@ import (
 
 	"github.com/google/go-github/v39/github"
 
-	"github.com/reviewdog/reviewdog"
-	"github.com/reviewdog/reviewdog/cienv"
-	"github.com/reviewdog/reviewdog/proto/rdf"
-	"github.com/reviewdog/reviewdog/service/commentutil"
-	"github.com/reviewdog/reviewdog/service/github/githubutils"
-	"github.com/reviewdog/reviewdog/service/serviceutil"
+	"github.com/androidjp/reviewdog"
+	"github.com/androidjp/reviewdog/cienv"
+	"github.com/androidjp/reviewdog/proto/rdf"
+	"github.com/androidjp/reviewdog/service/commentutil"
+	"github.com/androidjp/reviewdog/service/github/githubutils"
+	"github.com/androidjp/reviewdog/service/serviceutil"
 )
 
 var _ reviewdog.CommentService = &PullRequest{}

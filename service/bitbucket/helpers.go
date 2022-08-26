@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/reviewdog/reviewdog/proto/rdf"
+	"github.com/androidjp/reviewdog/proto/rdf"
 	"google.golang.org/protobuf/proto"
 )
 

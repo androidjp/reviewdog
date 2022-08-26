@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/reviewdog/reviewdog/commands"
-	"github.com/reviewdog/reviewdog/filter"
+	"github.com/androidjp/reviewdog/commands"
+	"github.com/androidjp/reviewdog/filter"
 )
 
 func TestRun_local(t *testing.T) {

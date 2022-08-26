@@ -7,10 +7,10 @@ import (
 	"io"
 	"os"
 
-	"github.com/reviewdog/reviewdog/diff"
-	"github.com/reviewdog/reviewdog/filter"
-	"github.com/reviewdog/reviewdog/parser"
-	"github.com/reviewdog/reviewdog/proto/rdf"
+	"github.com/androidjp/reviewdog/diff"
+	"github.com/androidjp/reviewdog/filter"
+	"github.com/androidjp/reviewdog/parser"
+	"github.com/androidjp/reviewdog/proto/rdf"
 )
 
 // Reviewdog represents review dog application which parses result of compiler
