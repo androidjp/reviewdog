@@ -62,7 +62,7 @@ func (g *MergeRequestDiff) Diff(ctx context.Context) ([]byte, error) {
 func (g *MergeRequestDiff) gitDiff(_ context.Context, baseSha, targetSha string) ([]byte, error) {
 	var out bytes.Buffer
 	var stderr bytes.Buffer
-	cmd := exec.Command("sudo", "git", "merge-base", targetSha, baseSha)
+	cmd := exec.Command("/bin/bash", "-c", fmt.Sprintf("sudo git merge-base %s %s", targetSha, baseSha))
 	cmd.Stdout = &out
 	cmd.Stderr = &stderr
 	err := cmd.Run()
@@ -70,7 +70,7 @@ func (g *MergeRequestDiff) gitDiff(_ context.Context, baseSha, targetSha string)
 		return nil, fmt.Errorf("failed to get merge-base commit with detail2: %s, baseSHA:%s, targetSHA: %s, stdout: %s", fmt.Sprint(err)+": "+stderr.String(), baseSha, targetSha, out.String())
 	}
 	mergeBase := strings.Trim(out.String(), "\n")
-	bs, err := exec.Command("sudo", "git", "diff", "--find-renames", mergeBase, baseSha).Output()
+	bs, err := exec.Command("/bin/bash", "-c", fmt.Sprintf("sudo git diff --find-renames %s %s", mergeBase, baseSha)).Output()
 	if err != nil {
 		return nil, fmt.Errorf("failed to run git diff: %w", err)
 	}
