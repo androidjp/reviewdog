@@ -1,13 +1,10 @@
 package gitlab
 
 import (
-	"bytes"
 	"context"
 	"fmt"
-	"os/exec"
-	"strings"
-
 	"github.com/xanzy/go-gitlab"
+	"os/exec"
 
 	"github.com/androidjp/reviewdog"
 	"github.com/androidjp/reviewdog/service/serviceutil"
@@ -60,17 +57,17 @@ func (g *MergeRequestDiff) Diff(ctx context.Context) ([]byte, error) {
 }
 
 func (g *MergeRequestDiff) gitDiff(_ context.Context, baseSha, targetSha string) ([]byte, error) {
-	var out bytes.Buffer
-	var stderr bytes.Buffer
-	cmd := exec.Command("/bin/bash", "-c", fmt.Sprintf("git merge-base %s %s", targetSha, baseSha))
-	cmd.Stdout = &out
-	cmd.Stderr = &stderr
-	err := cmd.Run()
-	if err != nil {
-		return nil, fmt.Errorf("failed to get merge-base commit with detail2: %s, baseSHA:%s, targetSHA: %s, stdout: %s", fmt.Sprint(err)+": "+stderr.String(), baseSha, targetSha, out.String())
-	}
-	mergeBase := strings.Trim(out.String(), "\n")
-	bs, err := exec.Command("/bin/bash", "-c", fmt.Sprintf("git diff --find-renames %s %s", mergeBase, baseSha)).Output()
+	//var out bytes.Buffer
+	//var stderr bytes.Buffer
+	//cmd := exec.Command("/bin/bash", "-c", fmt.Sprintf("git merge-base %s %s", targetSha, baseSha))
+	//cmd.Stdout = &out
+	//cmd.Stderr = &stderr
+	//err := cmd.Run()
+	//if err != nil {
+	//	return nil, fmt.Errorf("failed to get merge-base commit with detail2: %s, baseSHA:%s, targetSHA: %s, stdout: %s", fmt.Sprint(err)+": "+stderr.String(), baseSha, targetSha, out.String())
+	//}
+	//mergeBase := strings.Trim(out.String(), "\n")
+	bs, err := exec.Command("/bin/bash", "-c", fmt.Sprintf("git diff --find-renames %s %s", targetSha, baseSha)).Output()
 	if err != nil {
 		return nil, fmt.Errorf("failed to run git diff: %w", err)
 	}
