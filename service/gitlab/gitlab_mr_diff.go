@@ -67,7 +67,7 @@ func (g *MergeRequestDiff) gitDiff(_ context.Context, baseSha, targetSha string)
 	cmd.Stderr = &stderr
 	err := cmd.Run()
 	if err != nil {
-		return nil, fmt.Errorf("failed to get merge-base commit with detail2: %s, baseSHA:%s, targetSHA: %s", fmt.Sprint(err)+": "+stderr.String(), baseSha, targetSha)
+		return nil, fmt.Errorf("failed to get merge-base commit with detail2: %s, baseSHA:%s, targetSHA: %s, stdout: %s", fmt.Sprint(err)+": "+stderr.String(), baseSha, targetSha, out.String())
 	}
 	mergeBase := strings.Trim(out.String(), "\n")
 	bs, err := exec.Command("git", "diff", "--find-renames", mergeBase, baseSha).Output()
