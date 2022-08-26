@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/androidjp/reviewdog">
-    <img alt="reviewdog" src="https://raw.githubusercontent.com/haya14busa/i/d598ed7dc49fefb0018e422e4c43e5ab8f207a6b/reviewdog/reviewdog.logo.png">
+    <img alt="reviewdog" src="https://raw.githubusercontent.com/haya14busa/i/d598ed7dc49fefb0018e422e4c43e5ab8f207a6b/androidjp/reviewdog.logo.png">
   </a>
 </div>
 
@@ -16,7 +16,7 @@
     <img alt="GoDoc" src="https://img.shields.io/badge/godoc-reference-4F73B3.svg?label=godoc.org&maxAge=43200&logo=go">
   </a>
   <a href="./CHANGELOG.md">
-    <img alt="releases" src="https://img.shields.io/github/release/reviewdog/reviewdog.svg?logo=github">
+    <img alt="releases" src="https://img.shields.io/github/release/androidjp/reviewdog.svg?logo=github">
   </a>
   <a href="https://github.com/reviewdog/nightly">
     <img alt="nightly releases" src="https://img.shields.io/github/v/release/reviewdog/nightly.svg?logo=github">
@@ -33,13 +33,13 @@
   <a href="https://github.com/androidjp/reviewdog/actions?query=workflow%3Arelease">
     <img alt="release" src="https://github.com/androidjp/reviewdog/workflows/release/badge.svg">
   </a>
-  <a href="https://travis-ci.org/reviewdog/reviewdog"><img alt="Travis Status" src="https://img.shields.io/travis/reviewdog/reviewdog/master.svg?label=Travis&logo=travis"></a>
-  <a href="https://circleci.com/gh/reviewdog/reviewdog"><img alt="CircleCI Status" src="http://img.shields.io/circleci/build/github/reviewdog/reviewdog/master.svg?label=CircleCI&logo=circleci"></a>
-  <a href="https://codecov.io/github/reviewdog/reviewdog"><img alt="Coverage Status" src="https://img.shields.io/codecov/c/github/reviewdog/reviewdog/master.svg?logo=codecov"></a>
+  <a href="https://travis-ci.org/androidjp/reviewdog"><img alt="Travis Status" src="https://img.shields.io/travis/androidjp/reviewdog/master.svg?label=Travis&logo=travis"></a>
+  <a href="https://circleci.com/gh/androidjp/reviewdog"><img alt="CircleCI Status" src="http://img.shields.io/circleci/build/github/androidjp/reviewdog/master.svg?label=CircleCI&logo=circleci"></a>
+  <a href="https://codecov.io/github/androidjp/reviewdog"><img alt="Coverage Status" src="https://img.shields.io/codecov/c/github/androidjp/reviewdog/master.svg?logo=codecov"></a>
 </div>
 
 <div align="center">
-  <a href="https://gitlab.com/reviewdog/reviewdog/pipelines">
+  <a href="https://gitlab.com/androidjp/reviewdog/pipelines">
     <img alt="GitLab Supported" src="https://img.shields.io/badge/GitLab%20-Supported-fc6d26?logo=gitlab">
   </a>
   <a href="https://github.com/haya14busa/action-bumpr">
@@ -49,9 +49,9 @@
     <img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg">
   </a>
   <a href="https://somsubhra.github.io/github-release-stats/?username=reviewdog&repository=reviewdog&per_page=30">
-    <img alt="Github Releases Stats" src="https://img.shields.io/github/downloads/reviewdog/reviewdog/total.svg?logo=github">
+    <img alt="Github Releases Stats" src="https://img.shields.io/github/downloads/androidjp/reviewdog/total.svg?logo=github">
   </a>
-  <a href="https://starchart.cc/reviewdog/reviewdog"><img alt="Stars" src="https://img.shields.io/github/stars/reviewdog/reviewdog.svg?style=social"></a>
+  <a href="https://starchart.cc/androidjp/reviewdog"><img alt="Stars" src="https://img.shields.io/github/stars/androidjp/reviewdog.svg?style=social"></a>
 </div>
 <br />
 
@@ -100,19 +100,19 @@ by diff.
 ![comment in pull-request](https://user-images.githubusercontent.com/3797062/40941822-1d775064-6887-11e8-98e9-4775d37d47f8.png)
 ![commit status](https://user-images.githubusercontent.com/3797062/40941738-d62acb0a-6886-11e8-858d-7b97aded2a42.png)
 [![sample-comment.png](https://raw.githubusercontent.com/haya14busa/i/dc0ccb1e110515ea407c146d99b749018db05c45/reviewdog/sample-comment.png)](https://github.com/androidjp/reviewdog/pull/24#discussion_r84599728)
-![reviewdog-local-demo.gif](https://raw.githubusercontent.com/haya14busa/i/dc0ccb1e110515ea407c146d99b749018db05c45/reviewdog/reviewdog-local-demo.gif)
+![reviewdog-local-demo.gif](https://raw.githubusercontent.com/haya14busa/i/dc0ccb1e110515ea407c146d99b749018db05c45/androidjp/reviewdog-local-demo.gif)
 
 ## Installation
 
 ```shell
 # Install the latest version. (Install it into ./bin/ by default).
-$ curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s
+$ curl -sfL https://raw.githubusercontent.com/androidjp/reviewdog/master/install.sh | sh -s
 
 # Specify installation directory ($(go env GOPATH)/bin/) and version.
-$ curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b $(go env GOPATH)/bin [vX.Y.Z]
+$ curl -sfL https://raw.githubusercontent.com/androidjp/reviewdog/master/install.sh | sh -s -- -b $(go env GOPATH)/bin [vX.Y.Z]
 
 # In alpine linux (as it does not come with curl by default)
-$ wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s [vX.Y.Z]
+$ wget -O - -q https://raw.githubusercontent.com/androidjp/reviewdog/master/install.sh | sh -s [vX.Y.Z]
 ```
 
 ### Nightly releases
@@ -734,7 +734,7 @@ Example:
 ```yaml
 install:
   - mkdir -p ~/bin/ && export PATH="~/bin/:$PATH"
-  - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b ~/bin
+  - curl -sfL https://raw.githubusercontent.com/androidjp/reviewdog/master/install.sh| sh -s -- -b ~/bin
 
 script:
   - reviewdog -conf=.reviewdog.yml -reporter=github-pr-check
@@ -757,7 +757,7 @@ env:
 
 install:
   - mkdir -p ~/bin/ && export PATH="~/bin/:$PATH"
-  - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b ~/bin
+  - curl -sfL https://raw.githubusercontent.com/androidjp/reviewdog/master/install.sh| sh -s -- -b ~/bin
 
 script:
   - >-
@@ -782,7 +782,7 @@ jobs:
       - image: golang:latest
     steps:
       - checkout
-      - run: curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b ./bin
+      - run: curl -sfL https://raw.githubusercontent.com/androidjp/reviewdog/master/install.sh| sh -s -- -b ./bin
       - run: go vet ./... 2>&1 | ./bin/reviewdog -f=govet -reporter=github-pr-review
 
       # Deprecated: prefer GitHub Actions to use github-pr-check reporter.
@@ -816,7 +816,7 @@ pipelines:
         name: Reviewdog
         image: golangci/golangci-lint:v1.31-alpine
         script:
-          - wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | 
+          - wget -O - -q https://raw.githubusercontent.com/androidjp/reviewdog/master/install.sh | 
               sh -s -- -b $(go env GOPATH)/bin
           - golangci-lint run --out-format=line-number ./... | reviewdog -f=golangci-lint -reporter=bitbucket-code-report
 ```
